@@ -48,7 +48,6 @@ module "wrapper" {
   object_ownership                           = try(each.value.object_ownership, var.defaults.object_ownership, "BucketOwnerEnforced")
   owner                                      = try(each.value.owner, var.defaults.owner, {})
   policy                                     = try(each.value.policy, var.defaults.policy, null)
-  putin_khuylo                               = try(each.value.putin_khuylo, var.defaults.putin_khuylo, true)
   replication_configuration                  = try(each.value.replication_configuration, var.defaults.replication_configuration, {})
   request_payer                              = try(each.value.request_payer, var.defaults.request_payer, null)
   restrict_public_buckets                    = try(each.value.restrict_public_buckets, var.defaults.restrict_public_buckets, true)
